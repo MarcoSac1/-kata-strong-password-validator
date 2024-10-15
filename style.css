@@ -1,18 +1,27 @@
-/* Style all input fields */
-input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+.container{
+    width: 450px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    align-items: center;
+}
+/* Style all input fields */
+    input {
+    width: 50%;
+    padding: 12px;
     margin-top: 6px;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     }
 
     /* Style the submit button */
-    input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
+    input[type=password] {
+    color: rgb(8, 69, 94);
+    border: none;
+    border-radius: 12px;
     }
 
     /* Style the container for inputs */
@@ -21,14 +30,10 @@ input {
     padding: 20px;
     }
 
-    /* The message box is shown when the user clicks on the password field */
-    #message {
-    display:none;
-    background:rgb(224, 211, 87);
-    color: #000;
-    position: relative;
-    padding: 20px;
-    margin-top: 10px;
+    #message{
+    padding: .5rem;
+    background-color: rgb(64, 195, 247);
+    border-radius: 12px;
     }
 
     #message p {
@@ -49,7 +54,7 @@ input {
 
     /* Add a red text color and an "x" icon when the requirements are wrong */
     .invalid {
-    color: red;
+    color: rgb(214, 212, 212);
     }
 
     .invalid:before {
