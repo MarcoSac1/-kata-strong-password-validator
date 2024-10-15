@@ -3,7 +3,6 @@ const char = document.getElementById('char');
 const upper = document.getElementById('upper');
 const number = document.getElementById('number');
 const special = document.getElementById('special');
-
 const myBar = document.getElementById('myBar');
 
 
@@ -11,8 +10,7 @@ const myBar = document.getElementById('myBar');
 inputText.onkeyup = function(){
     let progress = 0;
 
-
-    // validate length
+    // validazione lunghezza
     if(inputText.value.length >= 9){
         char.classList.remove('invalid');
         char.classList.add('valid');
@@ -22,7 +20,7 @@ inputText.onkeyup = function(){
         char.classList.add('invalid');
     }
 
-    // validate uppercase
+    // validazione maiuscole
     const upperCaseLetters = /[A-Z]/g;
     if(inputText.value.match(upperCaseLetters)){
         upper.classList.remove('invalid');
@@ -33,7 +31,7 @@ inputText.onkeyup = function(){
         upper.classList.add('invalid');
     }
 
-    // validate numbers
+    // validazione numeri
     const numbers = /[0-9]/g;
     if (inputText.value.match(numbers)) {
         number.classList.remove('invalid');
@@ -45,7 +43,7 @@ inputText.onkeyup = function(){
         number.classList.add('invalid');
     }
 
-    // validate special
+    // validazione caratteri speciali
     const specials = /[!\-"#$%&'()*+,.\/:;<=>?@[\]\^_`{|}~\\]/g;
     if (inputText.value.match(specials)) {
         special.classList.remove('invalid');        
@@ -55,28 +53,10 @@ inputText.onkeyup = function(){
         special.classList.remove('valid');
         special.classList.add('invalid');
     }
+
     move(progress);
 };
 
 function move(progress) {
     myBar.style.width = progress + '%';
 }
-
-// var i = 'invalid';
-// function move() {
-//     if (i == 'valid') {
-//     i = 1;
-//     var elem = document.getElementById("myBar");
-//     var width = 20;
-//     var id = setInterval(frame, 10);
-//     function frame() {
-//         if (width >= 25) {
-//         clearInterval(id);
-//         i = 0;
-//         } else {
-//         width++;
-//         elem.style.width = width + "%";
-//         }
-//     }
-//     }
-// }
