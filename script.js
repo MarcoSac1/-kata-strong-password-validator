@@ -12,6 +12,7 @@ inputText.onfocus = function() {
 
 inputText.onkeyup = function(){
     
+    // validate length
     if(inputText.value.length >= 9){
         char.classList.remove('invalid');
         char.classList.add('valid');
@@ -20,8 +21,8 @@ inputText.onkeyup = function(){
         char.classList.add('invalid');
     }
 
+    // validate uppercase
     const lowerCaseLetters = /[A-Z]/g;
-    
     if(inputText.value.match(lowerCaseLetters)){
         upper.classList.remove('invalid');
         upper.classList.add('valid');
@@ -30,7 +31,25 @@ inputText.onkeyup = function(){
         upper.classList.add('invalid');
     }
 
-    cons
+    // validate numbers
+    const numbers = /[0-9]/g;
+    if (inputText.value.match(numbers)) {
+        number.classList.remove('invalid');
+        number.classList.add('valid');
+    }else{
+        number.classList.remove('valid');
+        number.classList.add('invalid');
+    }
+
+    // validate special
+    const specials = /[!\-"#$%&'()*+,.\/:;<=>?@[\]\^_`{|}~\\]/g;
+    if (inputText.value.match(specials)) {
+        special.classList.remove('invalid');        
+        special.classList.add('valid');
+    }else{
+        special.classList.remove('valid');
+        special.classList.add('invalid');
+    }
 }
 
 
