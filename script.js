@@ -1,8 +1,8 @@
 const inputText = document.getElementById('inputText');
 const char = document.getElementById('char');
-const  upper = document.getElementById('upper');
-const  number = document.getElementById('number');
-const  special = document.getElementById('special');
+const upper = document.getElementById('upper');
+const number = document.getElementById('number');
+const special = document.getElementById('special');
 
 
 
@@ -22,8 +22,8 @@ inputText.onkeyup = function(){
     }
 
     // validate uppercase
-    const lowerCaseLetters = /[A-Z]/g;
-    if(inputText.value.match(lowerCaseLetters)){
+    const upperCaseLetters = /[A-Z]/g;
+    if(inputText.value.match(upperCaseLetters)){
         upper.classList.remove('invalid');
         upper.classList.add('valid');
     }else{
