@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strong Password Generator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -13,14 +14,17 @@
     </header>
     <main>
         <section>
-            <div>
-                <form id="myForm">
-                    <input type="text" id="inputText" placeholder="Inserisci la tua password" name="name" required minlength="4" maxlength="10" size="18" />
-                    <p>Almeno 9 caratteri</p>
-                    <p>Almeno una maiuscola</p>
-                    <p>Almeno un numero</p>
-                    <p>Alnebi un carattere speciale </p>
+            <div class="container">
+                <form id="myPsw">
+                    <input type="text" id="inputText" placeholder="Inserisci la tua password" name="name" required minlength="4" maxlength="16" size="18" />
                 </form>
+                <div id="message">
+                    <h2>Password must contain the following:</h2>
+                    <p id="char" class="invalid">Almeno 9 caratteri</p>
+                    <p id="upper" class="invalid">Almeno una maiuscola</p>
+                    <p id="number" class="invalid">Almeno un numero</p>
+                    <p id="special" class="invalid">Almeno un carattere speciale </p>
+                </div>
             </div>
         </section>
     </main>
