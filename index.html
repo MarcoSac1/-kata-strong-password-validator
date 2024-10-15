@@ -14,9 +14,11 @@
     <main>
         <section>
             <div class="container">
-                <h1>
-                    Verifica della Password
-                </h1>
+                <section class="header">
+                    <h1>
+                        Verifica della Password
+                    </h1>
+                </section>
                 <form id="myPsw">
                     <input type="password" id="inputText" placeholder="Inserisci la tua password" name="name" required minlength="4" maxlength="16" size="18" />
                 </form>
@@ -26,6 +28,9 @@
                     <p id="upper" class="invalid">Almeno una maiuscola</p>
                     <p id="number" class="invalid">Almeno un numero</p>
                     <p id="special" class="invalid">Almeno un carattere speciale </p>
+                </div>
+                <div id="myProgress">
+                    <div id="myBar"></div>
                 </div>
             </div>
         </section>
