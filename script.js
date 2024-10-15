@@ -59,4 +59,15 @@ inputText.onkeyup = function(){
 
 function move(progress) {
     myBar.style.width = progress + '%';
+
+    // Cambia colore in base alla percentuale di progresso
+    if (progress <= 25) {
+        myBar.style.backgroundColor = '#ff0000';  // Rosso (0-25%)
+    } else if (progress <= 50) {
+        myBar.style.backgroundColor = '#ff9900';  // Arancione (25-50%)
+    } else if (progress <= 75) {
+        myBar.style.backgroundColor = '#ffff00';  // Giallo (50-75%)
+    } else if (progress <= 100) {
+        myBar.style.backgroundColor = '#00ff00';  // Verde (75-100%)
+    }
 }
