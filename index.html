@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strong Password Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" 
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -23,10 +26,10 @@
                     <input type="password" id="inputText" placeholder="Inserisci la tua password" name="name" required minlength="4" maxlength="16" size="18" />
                 </form>
                 <div id="message">
-                    <h2>La password deve contenere quanto segue:</h2>
+                    <h3>La password deve contenere quanto segue:</h3>
+                    <p id="number" class="invalid">Almeno un numero</p>
                     <p id="char" class="invalid">Almeno 9 caratteri</p>
                     <p id="upper" class="invalid">Almeno una maiuscola</p>
-                    <p id="number" class="invalid">Almeno un numero</p>
                     <p id="special" class="invalid">Almeno un carattere speciale </p>
                 </div>
                 <div id="myProgress">
